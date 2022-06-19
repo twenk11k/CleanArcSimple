@@ -5,6 +5,9 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+def properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     compileSdk 32
 
