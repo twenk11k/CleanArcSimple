@@ -29,4 +29,9 @@ object NetworkModule {
         .client(okHttpClient)
         .build()
 
+    @Singleton
+    @Provides
+    fun provideListingService(retrofit: Retrofit): ListingService =
+        retrofit.create(ListingService::class.java)
+
 }
