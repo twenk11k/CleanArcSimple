@@ -13,8 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img_back"
@@ -41,12 +40,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
             android:maxLines="2"
             android:text="@{listing.name}"
             android:textColor="@color/black"
-            android:gravity="center"
-            android:textStyle="bold"
             android:textSize="@dimen/text_size_high"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/img_product"
@@ -56,11 +55,11 @@
             android:id="@+id/txt_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_tiny"
+            android:gravity="center"
             android:maxLines="1"
             android:text="@{listing.price}"
-            android:gravity="center"
             android:textColor="@color/black"
-            android:layout_marginTop="@dimen/margin_tiny"
             android:textSize="@dimen/text_size_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,9 +71,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_tiny"
+            android:gravity="center"
             android:text="@{listing.parseCreatedAt()}"
             android:textColor="@color/black"
-            android:gravity="center"
             android:textSize="@dimen/text_size_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
