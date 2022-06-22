@@ -1,8 +1,8 @@
-package com.twenk11k.cleanarcsimple.data.model
+package com.twenk11k.cleanarcsimple.data.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class ListingResponse(
+data class Listing(
     @SerializedName("created_at")
     val createdAt: String?,
     val price: String?,
