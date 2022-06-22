@@ -8,7 +8,7 @@ import com.twenk11k.cleanarcsimple.R
 import com.twenk11k.cleanarcsimple.data.model.response.Listing
 import com.twenk11k.cleanarcsimple.databinding.ItemListingBinding
 
-class ListingAdapter : RecyclerView.Adapter<ListingAdapter.ViewHolder>() {
+class ListingAdapter(private val onSelect: (Listing?) -> Unit) : RecyclerView.Adapter<ListingAdapter.ViewHolder>() {
 
     private var items = ArrayList<Listing>()
 
@@ -19,7 +19,11 @@ class ListingAdapter : RecyclerView.Adapter<ListingAdapter.ViewHolder>() {
             parent,
             false
         )
-        return ViewHolder(binding)
+        return ViewHolder(binding).apply {
+            binding.root.setOnClickListener {
+                onSelect(items[absoluteAdapterPosition])
+            }
+        }
     }
 
     override fun getItemCount(): Int = items.size

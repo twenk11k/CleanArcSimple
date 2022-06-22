@@ -18,7 +18,9 @@ class ListingActivity : DataBindingActivity() {
         binding.apply {
             lifecycleOwner = this@ListingActivity
             vm = viewModel
-            rvListing.adapter = ListingAdapter()
+            rvListing.adapter = ListingAdapter {
+                // TODO display listing detail dialog
+            }
         }
     }
 
