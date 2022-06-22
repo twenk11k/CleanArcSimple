@@ -7,11 +7,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 data class Listing(
-    @SerializedName("created_at")
-    val createdAt: String?,
-    val price: String?,
     val name: String?,
     val uid: String?,
+    val price: String?,
+    @SerializedName("created_at")
+    val createdAt: String?,
     @SerializedName("image_ids")
     val imageIds: List<String?>?,
     @SerializedName("image_urls")
