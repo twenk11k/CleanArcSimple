@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Paddings -->
+    <dimen name="padding_medium">16dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_high">20sp</dimen>
+
+    <!-- Listing -->
+    <dimen name="listing_product_thumbnail_size">120dp</dimen>
+    <dimen name="listing_product_image_size">240dp</dimen>
+
+
+</resources>
