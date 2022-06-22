@@ -17,6 +17,8 @@ class ListingActivity : DataBindingActivity() {
         super.onCreate(savedInstanceState)
         binding.apply {
             lifecycleOwner = this@ListingActivity
+            vm = viewModel
+            rvListing.adapter = ListingAdapter()
         }
     }
 
