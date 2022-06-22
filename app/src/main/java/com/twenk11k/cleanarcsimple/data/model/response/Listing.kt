@@ -23,9 +23,11 @@ data class Listing(
     fun parseCreatedAt(): String? {
         val parseFormat = SimpleDateFormat(PARSE_FORMAT_PATTERN, Locale.ENGLISH)
         val dateFormat = SimpleDateFormat(DATE_FORMAT_PATTERN, Locale.ENGLISH)
-        val dateStart = dateFormat.parse(createdAt)
-        if (dateStart != null) {
-            return parseFormat.format(dateStart)
+        createdAt?.let {
+            val dateStart = dateFormat.parse(it)
+            if (dateStart != null) {
+                return parseFormat.format(dateStart)
+            }
         }
         return null
     }
